@@ -1,0 +1,6 @@
+{
+  "name": "Lottus Studio Venezuela",
+  "description": "Estudio de belleza profesional en Venezuela especializado en servicios de uñas, maquillaje, pestañas, cejas, masajes y depilación.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
