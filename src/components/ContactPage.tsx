@@ -11,12 +11,12 @@ export default function ContactPage() {
       animate={{ opacity: 1 }}
       className="max-w-6xl mx-auto px-6 py-12"
     >
-      <h1 className="text-4xl font-light text-center mb-12 text-[#71777A]">Contacto</h1>
+      <h1 className="font-serif text-4xl font-medium text-center mb-12 text-[#71777A]">Contacto</h1>
       
       <div className="grid md:grid-cols-2 gap-12 mb-16">
         {/* Contact Info */}
         <div className="bg-white/50 p-8 rounded-3xl shadow-sm border border-white/20">
-            <h2 className="text-2xl font-light mb-8">Información</h2>
+            <h2 className="font-serif text-2xl font-medium mb-8">Información</h2>
             <div className="space-y-6 text-[#71777A] font-light">
                 <div className="flex items-center gap-4">
                     <MapPin className="text-[#A99C8C]" />
@@ -26,9 +26,9 @@ export default function ContactPage() {
                     <Phone className="text-[#A99C8C]" />
                     <p>0422-5000268</p>
                 </div>
-                <div className="flex items-center gap-4">
-                    <Truck className="text-[#A99C8C]" />
-                    <p>Servicio a domicilio disponible</p>
+                <div className="text-[#71777A] font-light mt-4">
+                    <p>✨ Belleza con propósito, somos pet friendly y junto a nuestra clientela ayudamos a los animalitos que están en condición de calle.</p>
+                    <p className="mt-2 text-sm italic">Nota: Consulta nuestro reglamento para solicitar citas.</p>
                 </div>
             </div>
         </div>
@@ -45,7 +45,7 @@ export default function ContactPage() {
       </div>
 
       {/* Map */}
-      <h2 className="text-2xl font-light mb-6 text-center text-[#71777A]">¿Cómo llegar?</h2>
+      <h2 className="font-serif text-2xl font-medium mb-6 text-center text-[#71777A]">¿Cómo llegar?</h2>
       <div className="rounded-3xl overflow-hidden shadow-sm border border-white/20">
         <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3926.8631481816353!2d-66.6430335!3d10.1337424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a8648e5831557%3A0x647f1b74c4391c53!2sC.C.+Betania+de+C%C3%BAa!5e0!3m2!1ses!2sve!4v1542123456789!5m2!1ses!2sve" 

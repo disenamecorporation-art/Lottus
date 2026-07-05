@@ -4,6 +4,7 @@ import { X } from 'lucide-react';
 import { servicesData } from '../data';
 
 export default function AppointmentModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const [isPetFriendly, setIsPetFriendly] = useState(false);
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [service, setService] = useState(servicesData[0].services[0].name);
@@ -19,6 +20,7 @@ export default function AppointmentModal({ isOpen, onClose }: { isOpen: boolean;
 Nombre: ${name} ${surname}
 Servicio: ${service}
 Ubicación: ${location}
+Mascota: ${isPetFriendly ? 'Sí, llevaré mascota' : 'No'}
 Fecha: ${day}/${month}/${year}
 Hora: ${time}`;
     window.open(`https://wa.me/584225000268?text=${encodeURIComponent(message)}`, '_blank');
@@ -57,11 +59,11 @@ Hora: ${time}`;
                     <input type="radio" name="location" value="Studio" checked={location === 'Studio'} onChange={e => setLocation(e.target.value)} />
                     Studio
                 </label>
-                <label className="flex items-center gap-2">
-                    <input type="radio" name="location" value="Domicilio" checked={location === 'Domicilio'} onChange={e => setLocation(e.target.value)} />
-                    Domicilio
-                </label>
               </div>
+              <label className="flex items-center gap-2">
+                  <input type="checkbox" checked={isPetFriendly} onChange={e => setIsPetFriendly(e.target.checked)} />
+                  Iré con mi mascota (Somos Pet Friendly)
+              </label>
               <input type="time" value={time} onChange={e => setTime(e.target.value)} className="w-full p-3 rounded-full border border-gray-200" required />
               <div className="flex gap-2">
                 <select value={day} onChange={e => setDay(e.target.value)} className="flex-1 p-3 rounded-full border border-gray-200">
@@ -75,7 +77,7 @@ Hora: ${time}`;
                   <option value="2027">2027</option>
                 </select>
               </div>
-              <button type="submit" className="w-full bg-[#A99C8C] text-white py-3 rounded-full font-light hover:bg-[#968979] transition-colors">Confirmar Cita</button>
+              <button type="submit" className="w-full bg-[#A99C8C] text-white py-3 rounded-full font-light hover:bg-[#968979] transition-colors">Solicitar cita</button>
             </form>
           </motion.div>
         </>

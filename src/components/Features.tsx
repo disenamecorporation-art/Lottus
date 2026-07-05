@@ -17,7 +17,7 @@ export default function Features() {
           className="bg-white/40 backdrop-blur-md border border-white/30 p-8 rounded-3xl shadow-sm text-center"
         >
           <feature.icon size={48} className="mx-auto mb-6 text-[#A99C8C]" strokeWidth={1} />
-          <h3 className="text-xl font-medium mb-3">{feature.title}</h3>
+          <h3 className="font-serif text-xl font-medium mb-3">{feature.title}</h3>
           <p className="font-light opacity-70">{feature.desc}</p>
         </motion.div>
       ))}

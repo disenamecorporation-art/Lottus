@@ -13,6 +13,7 @@ export default function Header({ onNavigate, onOpenGallery }: { onNavigate: (pag
         
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8 font-light text-sm">
+          <button onClick={() => onNavigate('home')} className="hover:text-[#A99C8C] transition-colors">Inicio</button>
           <button onClick={() => { onNavigate('home'); setTimeout(() => { const el = document.getElementById('servicios'); el?.scrollIntoView({ behavior: 'smooth' }); }, 100); }} className="hover:text-[#A99C8C] transition-colors">Servicios</button>
           <button onClick={onOpenGallery} className="hover:text-[#A99C8C] transition-colors">Galeria</button>
           <button onClick={() => onNavigate('contact')} className="hover:text-[#A99C8C] transition-colors">Contacto</button>
@@ -27,6 +28,7 @@ export default function Header({ onNavigate, onOpenGallery }: { onNavigate: (pag
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-white/90 backdrop-blur-md p-6 flex flex-col gap-4 font-light text-sm border-b border-white/20">
+          <button onClick={() => { onNavigate('home'); setIsMenuOpen(false); }} className="text-left hover:text-[#A99C8C]">Inicio</button>
           <button onClick={() => { onNavigate('home'); setIsMenuOpen(false); setTimeout(() => { const el = document.getElementById('servicios'); el?.scrollIntoView({ behavior: 'smooth' }); }, 100); }} className="text-left hover:text-[#A99C8C]">Servicios</button>
           <button onClick={() => { onOpenGallery(); setIsMenuOpen(false); }} className="text-left hover:text-[#A99C8C]">Galeria</button>
           <button onClick={() => { onNavigate('contact'); setIsMenuOpen(false); }} className="text-left hover:text-[#A99C8C]">Contacto</button>

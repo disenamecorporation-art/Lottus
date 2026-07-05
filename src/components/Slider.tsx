@@ -38,7 +38,7 @@ export default function Slider({ onOpenGallery }: { onOpenGallery: () => void })
             onClick={onOpenGallery}
             className="bg-[#dcd8cf] text-[#71777A] px-8 py-3 rounded-full font-light shadow-md"
           >
-            Ver catálogo
+            Galería de servicios
           </motion.button>
         </div>
         <button onClick={prev} className="absolute left-4 top-1/2 p-2 bg-white/30 backdrop-blur-sm rounded-full text-white hover:bg-white/50 transition-colors">
